@@ -1,0 +1,1 @@
+Hello i'll try to make fullstack with nestjs and reactjs
