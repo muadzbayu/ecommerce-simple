@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./backend
-          file: ./backends/Dockerfile
+          file: ./backend/Dockerfile
           push: true
           tags: muadzbayu/ecommerce-backend:latest
 
