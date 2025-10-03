@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  backend:
+    image: muadzbayu/ecommerce-backend:latest
+    container_name: ecommerce-backend
+    restart: always
+    environment:
+      DATABASE_HOST: host.docker.internal
+      DATABASE_PORT: 5432
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: 12345678
+      DATABASE_NAME: ecommerce
+    ports:
+      - "4000:4000"
+
+  frontend:
+    image: muadzbayu/ecommerce-frontend:latest
+    container_name: ecommerce-frontend
+    restart: always
+    ports:
+      - "4001:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
