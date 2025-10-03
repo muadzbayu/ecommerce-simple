@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   backend:
-    image: muadzbayu/ecommerce-backend:latest
+    image: muadzbayu/ecommerce-backend:main
     container_name: ecommerce-backend
     restart: always
     environment:
@@ -15,7 +15,7 @@ services:
       - "4000:4000"
 
   frontend:
-    image: muadzbayu/ecommerce-frontend:latest
+    image: muadzbayu/ecommerce-frontend:main
     container_name: ecommerce-frontend
     restart: always
     ports:
