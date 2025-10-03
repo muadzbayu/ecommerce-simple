@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   backend:
-    image: muadzbayu/ecommerce-backend:main
+    image: muadzbayu/ecommerce-backend:latest
     container_name: ecommerce-backend
     restart: always
     environment:
@@ -15,13 +15,11 @@ services:
       - "4000:4000"
 
   frontend:
-    image: muadzbayu/ecommerce-frontend:main
+    image: muadzbayu/ecommerce-frontend:latest
     container_name: ecommerce-frontend
     restart: always
     ports:
-      - "4001:3000"
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+      - "4001:80"
 
   watchtower:
     image: containrrr/watchtower

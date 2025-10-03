@@ -1,10 +1,28 @@
-FROM node:20
+# FROM node:20
 
+# WORKDIR /app
+
+# COPY package*.json ./
+# RUN npm install
+
+# # Tidak usah COPY . . biar pakai volume dari compose
+
+# CMD ["npm", "run", "start:dev"]
+
+FROM node:20
 WORKDIR /app
 
+# copy package.json & install deps
 COPY package*.json ./
 RUN npm install
 
-# Tidak usah COPY . . biar pakai volume dari compose
+# copy seluruh source
+COPY . .
 
-CMD ["npm", "run", "start:dev"]
+# build nestjs ke dist/
+RUN npm run build
+
+# jalankan hasil build
+CMD ["node", "dist/main.js"]
+
+EXPOSE 4000
