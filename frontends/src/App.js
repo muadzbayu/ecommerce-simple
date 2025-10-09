@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Prxys yai test</h1>
+      <h1>Prxys yai test sekali lagi</h1>
       <ul>
         {products.map((p, i) => <li key={i}>{p.name}</li>)}
       </ul>
