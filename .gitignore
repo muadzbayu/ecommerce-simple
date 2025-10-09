@@ -1,0 +1,90 @@
+# ======================================================
+# 🌐 FRONTEND (React)
+# ======================================================
+
+# dependencies
+/frontends/node_modules
+/frontends/.pnp
+/frontends/.pnp.js
+
+# testing
+/frontends/coverage
+
+# production build
+/frontends/build
+
+# misc
+/frontends/.DS_Store
+/frontends/.env.local
+/frontends/.env.development.local
+/frontends/.env.test.local
+/frontends/.env.production.local
+
+/frontends/npm-debug.log*
+/frontends/yarn-debug.log*
+/frontends/yarn-error.log*
+
+# ======================================================
+# ⚙️ BACKEND (Node / Express / Nest / etc.)
+# ======================================================
+
+# compiled output
+/backend/dist
+/backend/node_modules
+/backend/build
+
+# logs
+/backend/logs
+/backend/*.log
+/backend/npm-debug.log*
+/backend/pnpm-debug.log*
+/backend/yarn-debug.log*
+/backend/yarn-error.log*
+/backend/lerna-debug.log*
+
+# environment variables
+/backend/.env
+/backend/.env.development.local
+/backend/.env.test.local
+/backend/.env.production.local
+/backend/.env.local
+
+# temp
+/backend/.temp
+/backend/.tmp
+
+# runtime data
+/backend/pids
+/backend/*.pid
+/backend/*.seed
+/backend/*.pid.lock
+
+# diagnostic reports
+/backend/report.*.json
+
+# ======================================================
+# 🧩 COMMON / GLOBAL
+# ======================================================
+
+# OS files
+.DS_Store
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# test coverage
+/coverage
+/.nyc_output
